@@ -16,16 +16,15 @@
             Name: <input type="text" name="name" value="<?php echo $name;?>">
                 <!-- <span class="error">* </span> -->
                  <br><br>
-            Message: <input type="text" name="name" value="<?php echo $message;?>">
+            Message: <input type="text" name="message" value="<?php echo $message;?>">
                 <!-- <span class="error">* </span> -->
                 <br><br>
             <input type="submit" name="submit" value="Submit">
         </form>
-        <?php
-        echo "<h2>Message:</h2>";
-        echo $name;
-        echo "<br>";
-        echo $message;
-        ?>
+        
+        <h2>Message:</h2>
+        <?php echo htmlspecialchars($_POST['name']); ?>
+        <br>
+        <?php echo htmlspecialchars($_POST['message']); ?>
     </body>
 </html>
