@@ -9,8 +9,23 @@
         <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
-    <h1>
-        <?php echo "Full stack messenger app"; ?>
-    </h1>
+        <h1>
+            <?php echo "Full stack messenger app"; ?>
+        </h1>
+        <form action="" method="post">
+            Name: <input type="text" name="name" value="<?php echo $name;?>">
+                <!-- <span class="error">* </span> -->
+                 <br><br>
+            Message: <input type="text" name="name" value="<?php echo $message;?>">
+                <!-- <span class="error">* </span> -->
+                <br><br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        <?php
+        echo "<h2>Message:</h2>";
+        echo $name;
+        echo "<br>";
+        echo $message;
+        ?>
     </body>
 </html>
